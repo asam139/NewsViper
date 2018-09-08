@@ -1,5 +1,5 @@
 //
-//  NewsListWireFrame.swift
+//  NewsListWireframe.swift
 //  NewsViper
 //
 //  Created by Saul Moreno Abril on 08/09/2018.
@@ -9,15 +9,15 @@
 import Foundation
 import UIKit
 
-class NewsListWireFrame: NewsListWireFrameProtocol {
+class NewsListWireframe: NewsListWireframeProtocol {
     static func createNewsListModule() -> UIViewController {
         let navController = mainstoryboard.instantiateViewController(withIdentifier: "NewsNavigationController")
         if let view = navController.childViewControllers.first as? NewsListViewController {
             let presenter: NewsListPresenterProtocol & NewsListInteractorOutputProtocol = NewsListPresenter()
-            let interactor: NewsListInteractorInputProtocol = NewsListInteractor()
+            let interactor: NewsListInteractorInputProtocol & NewsListRemoteDataManagerOutputProtocol = NewsListInteractor()
             //let localDataManager: NewsListLocalDataManagerInputProtocol = NewsListLocalDataManager()
-            //let remoteDataManager: NewsListRemoteDataManagerInputProtocol = NewsListRemoteDataManager()
-            let wireFrame: NewsListWireFrameProtocol = NewsListWireFrame()
+            let remoteDataManager: NewsListRemoteDataManagerInputProtocol = NewsListRemoteDataManager()
+            let wireFrame: NewsListWireframeProtocol = NewsListWireframe()
             
             view.presenter = presenter
             presenter.view = view
@@ -25,8 +25,8 @@ class NewsListWireFrame: NewsListWireFrameProtocol {
             presenter.interactor = interactor
             interactor.presenter = presenter
             //interactor.localDatamanager = localDataManager
-            //interactor.remoteDatamanager = remoteDataManager
-            //remoteDataManager.remoteRequestHandler = interactor
+            interactor.remoteDatamanager = remoteDataManager
+            remoteDataManager.remoteRequestHandler = interactor
             
             return navController
         }

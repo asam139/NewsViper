@@ -22,56 +22,59 @@ protocol NewsListViewProtocol: class {
     func hideLoading()
 }
 
-protocol NewsListWireFrameProtocol: class {
+protocol NewsListWireframeProtocol: class {
     static func createNewsListModule() -> UIViewController
-    // PRESENTER -> WIREFRAME
+    // Presenter -> Wireframe
     func presentNewsDetailScreen(from view: NewsListViewProtocol, forNews news: NewsModel)
 }
 
 protocol NewsListPresenterProtocol: class {
     var view: NewsListViewProtocol? { get set }
     var interactor: NewsListInteractorInputProtocol? { get set }
-    var wireFrame: NewsListWireFrameProtocol? { get set }
+    var wireFrame: NewsListWireframeProtocol? { get set }
     
-    // VIEW -> PRESENTER
+    // View -> Presenter
     func viewDidLoad()
     func showNewsDetail(forNews new: NewsModel)
 }
 
 protocol NewsListInteractorOutputProtocol: class {
-    // INTERACTOR -> PRESENTER
+    // Interactor -> Presenter
     func didRetrieveNews(_ news: [NewsModel])
     func onError()
 }
 
 protocol NewsListInteractorInputProtocol: class {
     var presenter: NewsListInteractorOutputProtocol? { get set }
+    var remoteDatamanager: NewsListRemoteDataManagerInputProtocol? { get set }
     //var localDatamanager: NewsListLocalDataManagerInputProtocol? { get set }
-    //var remoteDatamanager: NewsListRemoteDataManagerInputProtocol? { get set }
     
-    // PRESENTER -> INTERACTOR
+    // Presenter -> Interactor
     func retrieveNewsList()
 }
 
-protocol NewsListDataManagerInputProtocol: class {
-    // INTERACTOR -> DATAMANAGER
-}
-
-/*protocol NewsListRemoteDataManagerInputProtocol: class {
+protocol NewsListRemoteDataManagerInputProtocol: class {
     var remoteRequestHandler: NewsListRemoteDataManagerOutputProtocol? { get set }
     
-    // INTERACTOR -> REMOTEDATAMANAGER
+    // Interactor -> RemoteDataManager
     func retrieveNewsList()
-}*/
+}
 
-/*protocol NewsListRemoteDataManagerOutputProtocol: class {
-    // REMOTEDATAMANAGER -> INTERACTOR
+protocol NewsListRemoteDataManagerOutputProtocol: class {
+    // RemoteDataManager -> Interactor
     func onNewsRetrieved(_ news: [NewsModel])
     func onError()
-}*/
+}
 
 /*protocol NewsListLocalDataManagerInputProtocol: class {
     // INTERACTOR -> LOCALDATAMANAGER
     func retrieveNewsList() throws -> [News]
     func saveNews(title: String, description: String, link: String, pubDate: String, imageUrl: String) throws
 }*/
+
+/*
+protocol NewsListLocalDataManagerOutputProtocol: class {
+    // LocalDataManager -> Interactor
+    
+}
+*/

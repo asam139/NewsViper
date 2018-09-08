@@ -7,39 +7,28 @@
 //
 
 import Foundation
-import Alamofire
-import SWXMLHash
 
 class NewsListInteractor: NewsListInteractorInputProtocol {
+    var remoteDatamanager: NewsListRemoteDataManagerInputProtocol?
     var presenter: NewsListInteractorOutputProtocol?
-    
-    fileprivate let queue = DispatchQueue(label: "\(Constants.bundleID).\(String(describing: NewsListInteractor.self))", qos: .background, attributes: .concurrent)
     
     func retrieveNewsList() {
         
-        Alamofire.request(Endpoints.News.fetch.url).responseString(queue: queue) { response in
-            if response.response?.statusCode == 200 {
-                let xmlString = response.result.value!
-                let xml = SWXMLHash.parse(xmlString)
-                
-                let items = xml["rss"]["channel"]["item"].all
-                var news: [NewsModel] = []
-                for item in items {
-                    let model = NewsModel(indexer: item)
-                    news.append(model)
-                }
-                
-                DispatchQueue.main.async { [weak self] in
-                    self?.presenter?.didRetrieveNews(news)
-                }
-                
-            } else {
-                DispatchQueue.main.async { [weak self] in
-                    self?.presenter?.onError()
-                }
-            }
-        }
+        // First retrieve from local model
+        // Not implemented
         
-        
+        // If it is empty, retrieve from remote model
+        remoteDatamanager?.retrieveNewsList()
+
+    }
+}
+
+extension NewsListInteractor: NewsListRemoteDataManagerOutputProtocol {
+    func onNewsRetrieved(_ news: [NewsModel]) {
+        presenter?.didRetrieveNews(news)
+    }
+    
+    func onError() {
+        presenter?.onError()
     }
 }

@@ -11,7 +11,7 @@ import Foundation
 class NewsListPresenter: NewsListPresenterProtocol {
     weak var view: NewsListViewProtocol?
     var interactor: NewsListInteractorInputProtocol?
-    var wireFrame: NewsListWireFrameProtocol?
+    var wireFrame: NewsListWireframeProtocol?
     
     func viewDidLoad() {
         view?.showLoading()
