@@ -7,13 +7,13 @@
 //
 
 import UIKit
-
+import SDWebImage
 
 
 class NewsViewController: UIViewController {
     var presenter: NewsViewToPresenterProtocol?
     
-    static let cellIdentifier:String = "NewsCell_Identifier"
+    static fileprivate let cellIdentifier:String = "NewsCell_Identifier"
     @IBOutlet fileprivate  weak var tableView: UITableView!
     
     fileprivate var news: [NewsModel] = []
@@ -52,10 +52,8 @@ extension NewsViewController: UITableViewDataSource {
         cell.newsDateLabel.text = newsModel.pubDate
     
         if let imageString = newsModel.imageURL {
-            let imageURL = URL(string: imageString)
-            let imageData = try? Data(contentsOf: imageURL!)
-            if imageData != nil {
-                cell.newsImageView.image = UIImage(data: imageData!)
+            if let imageURL = URL(string: imageString) {
+                cell.newsImageView.sd_setImage(with: imageURL, placeholderImage: UIImage(named: "news"))
             }
         }
         

@@ -11,6 +11,8 @@ target 'NewsViper' do
   # Pods for NewsViper
   pod 'Alamofire', '~> 4.7.3'
   pod 'SWXMLHash', '~> 4.7.1'
+  
+  pod 'SDWebImage', '~> 4.0'
 
   target 'NewsViperTests' do
     inherit! :search_paths
