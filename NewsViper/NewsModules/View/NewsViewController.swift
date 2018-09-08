@@ -26,6 +26,14 @@ class NewsViewController: UIViewController {
         
         presenter?.updateView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPath, animated: true)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,6 +43,22 @@ class NewsViewController: UIViewController {
     @objc
     func search(sender: UIBarButtonItem) {
         
+    }
+}
+
+extension NewsViewController: NewsPresenterToViewProtocol {
+    func showNews(news: [NewsModel]) {
+        self.news = news
+        
+        tableView.reloadData()
+    }
+    
+    func showError() {
+        let alertController = UIAlertController.init(title: "Error", message: "You are not connection to Internet", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Ok", style: .cancel, handler:nil)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 
@@ -57,25 +81,18 @@ extension NewsViewController: UITableViewDataSource {
             }
         }
         
-            
         return cell
     }
 }
 
-extension NewsViewController: NewsPresenterToViewProtocol {
-    func showNews(news: [NewsModel]) {
-        self.news = news
-        
-        tableView.reloadData()
+extension NewsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //let newsModel = news[indexPath.row]
+
     }
     
-    func showError() {
-        let alertController = UIAlertController.init(title: "Error", message: "You are not connection to Internet", preferredStyle: .alert)
-        
-        let cancelAction = UIAlertAction(title: "Ok", style: .cancel, handler:nil)
-        alertController.addAction(cancelAction)
-        self.present(alertController, animated: true, completion: nil)
-    }
 }
+
 
 
