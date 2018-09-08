@@ -1,5 +1,5 @@
 //
-//  NewsViewController.swift
+//  NewsListViewController.swift
 //  NewsViper
 //
 //  Created by Saul Moreno Abril on 08/09/2018.
@@ -10,12 +10,11 @@ import UIKit
 import SDWebImage
 
 
-class NewsViewController: UIViewController {
-    var presenter: NewsViewToPresenterProtocol?
-    
-    static fileprivate let cellIdentifier:String = "NewsCell_Identifier"
+class NewsListViewController: UIViewController {
     @IBOutlet fileprivate  weak var tableView: UITableView!
+    static fileprivate let cellIdentifier:String = "NewsListCell_Identifier"
     
+    var presenter: NewsListPresenterProtocol?
     fileprivate var news: [NewsModel] = []
     
     override func viewDidLoad() {
@@ -24,7 +23,7 @@ class NewsViewController: UIViewController {
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(search(sender:)))
         
-        presenter?.updateView()
+        presenter?.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,8 +45,15 @@ class NewsViewController: UIViewController {
     }
 }
 
-extension NewsViewController: NewsPresenterToViewProtocol {
-    func showNews(news: [NewsModel]) {
+extension NewsListViewController: NewsListViewProtocol {
+    func showLoading() {
+        
+    }
+    
+    func hideLoading() {
+    }
+    
+    func showNews(_ news: [NewsModel]) {
         self.news = news
         
         tableView.reloadData()
@@ -62,13 +68,13 @@ extension NewsViewController: NewsPresenterToViewProtocol {
     }
 }
 
-extension NewsViewController: UITableViewDataSource {
+extension NewsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return news.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: NewsViewController.cellIdentifier, for: indexPath) as! NewsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: NewsListViewController.cellIdentifier, for: indexPath) as! NewsListCell
         
         let newsModel = news[indexPath.row]
         cell.newsTitleLabel.text = newsModel.title
@@ -85,7 +91,7 @@ extension NewsViewController: UITableViewDataSource {
     }
 }
 
-extension NewsViewController: UITableViewDelegate {
+extension NewsListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //let newsModel = news[indexPath.row]

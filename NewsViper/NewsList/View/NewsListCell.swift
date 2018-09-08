@@ -1,5 +1,5 @@
 //
-//  NewsCell.swift
+//  NewsListCell.swift
 //  NewsViper
 //
 //  Created by Saul Moreno Abril on 08/09/2018.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class NewsCell: UITableViewCell {
+class NewsListCell: UITableViewCell {
     
     @IBOutlet weak var newsTitleLabel: UILabel!
     @IBOutlet weak var newsDescriptionTextView: UITextView!

@@ -1,5 +1,5 @@
 //
-//  NewsInteractor.swift
+//  NewsListInteractor.swift
 //  NewsViper
 //
 //  Created by Saul Moreno Abril on 08/09/2018.
@@ -10,12 +10,12 @@ import Foundation
 import Alamofire
 import SWXMLHash
 
-class NewsInteractor: NewsPresenterToInteractorProtocol {
-    var presenter: NewsInteractorToPresenterProtocol?
+class NewsListInteractor: NewsListInteractorInputProtocol {
+    var presenter: NewsListInteractorOutputProtocol?
     
-    fileprivate let queue = DispatchQueue(label: "\(Constants.bundleID).\(String(describing: NewsInteractor.self))", qos: .background, attributes: .concurrent)
+    fileprivate let queue = DispatchQueue(label: "\(Constants.bundleID).\(String(describing: NewsListInteractor.self))", qos: .background, attributes: .concurrent)
     
-    func fetchNews() {
+    func retrieveNewsList() {
         
         Alamofire.request(Endpoints.News.fetch.url).responseString(queue: queue) { response in
             if response.response?.statusCode == 200 {
@@ -28,17 +28,18 @@ class NewsInteractor: NewsPresenterToInteractorProtocol {
                     let model = NewsModel(indexer: item)
                     news.append(model)
                 }
-    
+                
                 DispatchQueue.main.async { [weak self] in
-                    self?.presenter?.newsFetched(news: news)
+                    self?.presenter?.didRetrieveNews(news)
                 }
                 
             } else {
                 DispatchQueue.main.async { [weak self] in
-                    self?.presenter?.newsFetchedFailed();
+                    self?.presenter?.onError()
                 }
             }
         }
+        
         
     }
 }
