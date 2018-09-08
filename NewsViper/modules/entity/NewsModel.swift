@@ -8,12 +8,29 @@
 
 import Foundation
 
-class NewsModel {
-    internal var title: String?
-    internal var description: String?
-    internal var link: NSURL?
-    internal var pubDate: NSDate?
-    internal var imageURL: NSURL?
+private let KEY_TITLE = "title";
+private let KEY_DESCRIPTION = "description";
+private let KEY_LINK = "link";
+private let KEY_PUB_DATE = "pubDate";
+private let KEY_ATT_IMAGE_URL = "url";
+
+class NewsModel: CustomStringConvertible {
+    var title: String?
+    var descriptionText: String?
+    var link: String?
+    var pubDate: String?
+    var imageURL: String?
+    
+    
+    var description: String {
+        return  "Title: \(title)" +
+                "Description: \(descriptionText)" +
+                "Link: \(link)" +
+                "PubDate: \(pubDate)" +
+                "Image: \(imageURL)"
+    }
+    
+    
 }
 
 

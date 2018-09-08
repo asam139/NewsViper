@@ -27,8 +27,7 @@ class NewsViewController: UIViewController {
 extension NewsViewController: NewsPresenterToViewProtocol {
     func showNews(news: [NewsModel]) {
         for oneNew in news {
-            print("Title: \(oneNew.title ?? "No name"))")
-            print("Description: \(oneNew.description ?? "No description"))")
+            print(String(describing: oneNew))
         }
     }
     
