@@ -26,6 +26,7 @@ class NewsRouter: NewsPresenterToRouterProtocol {
         viewController.presenter = presenter;
         presenter.view = viewController;
         presenter.router = router;
+        presenter.interactor = interactor
         interactor.presenter = presenter
         
         let navController = UINavigationController.init(rootViewController: viewController)

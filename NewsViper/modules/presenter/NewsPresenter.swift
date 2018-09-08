@@ -10,15 +10,14 @@ import Foundation
 
 class NewsPresenter {
     var view: NewsPresenterToViewProtocol?
-    var interector: NewsPresenterToInteractorProtocol?
+    var interactor: NewsPresenterToInteractorProtocol?
     var router: NewsPresenterToRouterProtocol?
     
 }
 
 extension NewsPresenter: NewsViewToPresenterProtocol {
-    
     func updateView() {
-        interector?.fetchNews()
+        interactor?.fetchNews()
     }
 }
 

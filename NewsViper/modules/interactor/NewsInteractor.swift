@@ -7,12 +7,23 @@
 //
 
 import Foundation
-
+import Alamofire
 
 class NewsInteractor: NewsPresenterToInteractorProtocol {
     var presenter: NewsInteractorToPresenterProtocol?
     
+    
+    fileprivate let queue = DispatchQueue(label: "\(Constants.bundleID).\(String(describing: NewsInteractor.self))", qos: .background, attributes: .concurrent)
+    
     func fetchNews() {
-        // Not implemented
+        Alamofire.request(Constants.apiURL).responseString(queue: queue) { response in
+            if(response.response?.statusCode == 200){
+                let string = response.result.value
+                self.presenter?.newsFetched(news: [])
+            } else {
+                self.presenter?.newsFetchedFailed();
+            }
+        }
+        
     }
 }

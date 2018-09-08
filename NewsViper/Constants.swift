@@ -10,5 +10,7 @@ import Foundation
 
 
 class Constants {
-    public static let apiURL = "http://feeds.bbci.co.uk/news/world/rss.xml";
+    public static let bundleID = Bundle.main.bundleIdentifier!;
+    
+    public static let apiURL = "https://feeds.bbci.co.uk/news/world/rss.xml";
 }
