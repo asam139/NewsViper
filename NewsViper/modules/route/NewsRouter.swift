@@ -10,14 +10,23 @@ import Foundation
 import UIKit
 
 class NewsRouter: NewsPresenterToRouterProtocol {
+    
     static var mainstoryboard: UIStoryboard{
         return UIStoryboard(name:"Main",bundle: Bundle.main)
     }
     
     
     static func createModule() -> UIViewController {
-        let viewController = mainstoryboard.instantiateViewController(withIdentifier: "NewsViewController")
+        let viewController = mainstoryboard.instantiateViewController(withIdentifier: "NewsViewController") as! NewsViewController
         
+        let presenter = NewsPresenter()
+        let interactor = NewsInteractor()
+        let router = NewsRouter()
+        
+        viewController.presenter = presenter;
+        presenter.view = viewController;
+        presenter.router = router;
+        interactor.presenter = presenter
         
         let navController = UINavigationController.init(rootViewController: viewController)
         return navController;

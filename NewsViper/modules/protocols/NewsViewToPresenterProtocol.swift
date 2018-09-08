@@ -1,5 +1,5 @@
 //
-//  NewsPresenterToRouterProtocol.swift
+//  ViewToPresenterProtocol.swift
 //  NewsViper
 //
 //  Created by Saul Moreno Abril on 08/09/2018.
@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import UIKit
 
-
-protocol NewsPresenterToRouterProtocol: class {
+protocol NewsViewToPresenterProtocol: class {
+    var view: NewsPresenterToViewProtocol? {get set}
     
-    static func createModule() -> UIViewController;
+    func updateView();
 }
