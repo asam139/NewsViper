@@ -20,7 +20,10 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.title = "BBC News"
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(search(sender:)))
+        
         presenter?.updateView()
     }
 
@@ -29,6 +32,10 @@ class NewsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @objc
+    func search(sender: UIBarButtonItem) {
+        
+    }
 }
 
 extension NewsViewController: UITableViewDataSource {
