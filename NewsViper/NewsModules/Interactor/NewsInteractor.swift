@@ -13,7 +13,6 @@ import SWXMLHash
 class NewsInteractor: NewsPresenterToInteractorProtocol {
     var presenter: NewsInteractorToPresenterProtocol?
     
-    
     fileprivate let queue = DispatchQueue(label: "\(Constants.bundleID).\(String(describing: NewsInteractor.self))", qos: .background, attributes: .concurrent)
     
     func fetchNews() {

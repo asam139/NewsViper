@@ -135,7 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				423DBE352143D51200959547 /* Constants.swift */,
-				423DBE1A2143BC8C00959547 /* modules */,
+				423DBE1A2143BC8C00959547 /* NewsModules */,
 				423DBDEC2143BB2700959547 /* AppDelegate.swift */,
 				423DBDF02143BB2700959547 /* Main.storyboard */,
 				423DBDF32143BB2800959547 /* Assets.xcassets */,
@@ -163,20 +163,20 @@
 			path = NewsViperUITests;
 			sourceTree = "<group>";
 		};
-		423DBE1A2143BC8C00959547 /* modules */ = {
+		423DBE1A2143BC8C00959547 /* NewsModules */ = {
 			isa = PBXGroup;
 			children = (
-				423DBE1B2143BC9200959547 /* protocols */,
-				423DBE202143BCAF00959547 /* view */,
-				423DBE1F2143BCAA00959547 /* interactor */,
-				423DBE1E2143BCA400959547 /* presenter */,
-				423DBE1D2143BC9D00959547 /* entity */,
-				423DBE1C2143BC9800959547 /* route */,
+				423DBE1B2143BC9200959547 /* Protocols */,
+				423DBE202143BCAF00959547 /* View */,
+				423DBE1F2143BCAA00959547 /* Interactor */,
+				423DBE1E2143BCA400959547 /* Presenter */,
+				423DBE1D2143BC9D00959547 /* Entity */,
+				423DBE1C2143BC9800959547 /* Route */,
 			);
-			path = modules;
+			path = NewsModules;
 			sourceTree = "<group>";
 		};
-		423DBE1B2143BC9200959547 /* protocols */ = {
+		423DBE1B2143BC9200959547 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				423DBE232143BF1700959547 /* NewsPresenterToRouterProtocol.swift */,
@@ -185,47 +185,47 @@
 				423DBE2B2143C56800959547 /* NewsPresenterToInteractorProtocol.swift */,
 				423DBE2F2143C64200959547 /* NewsInteractorToPresenterProtocol.swift */,
 			);
-			path = protocols;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
-		423DBE1C2143BC9800959547 /* route */ = {
+		423DBE1C2143BC9800959547 /* Route */ = {
 			isa = PBXGroup;
 			children = (
 				423DBE212143BE8C00959547 /* NewsRouter.swift */,
 			);
-			path = route;
+			path = Route;
 			sourceTree = "<group>";
 		};
-		423DBE1D2143BC9D00959547 /* entity */ = {
+		423DBE1D2143BC9D00959547 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				423DBE312143C71A00959547 /* NewsModel.swift */,
 			);
-			path = entity;
+			path = Entity;
 			sourceTree = "<group>";
 		};
-		423DBE1E2143BCA400959547 /* presenter */ = {
+		423DBE1E2143BCA400959547 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
 				423DBE252143C34300959547 /* NewsPresenter.swift */,
 			);
-			path = presenter;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
-		423DBE1F2143BCAA00959547 /* interactor */ = {
+		423DBE1F2143BCAA00959547 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
 				423DBE2D2143C5E700959547 /* NewsInteractor.swift */,
 			);
-			path = interactor;
+			path = Interactor;
 			sourceTree = "<group>";
 		};
-		423DBE202143BCAF00959547 /* view */ = {
+		423DBE202143BCAF00959547 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				423DBDEE2143BB2700959547 /* NewsViewController.swift */,
 			);
-			path = view;
+			path = View;
 			sourceTree = "<group>";
 		};
 		F27021A5E5235080FE965833 /* Frameworks */ = {
