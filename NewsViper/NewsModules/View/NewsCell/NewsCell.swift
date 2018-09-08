@@ -15,4 +15,14 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var newsDescriptionTextView: UITextView!
     @IBOutlet weak var newsDateLabel: UILabel!
     @IBOutlet weak var newsImageView: UIImageView!
+    
+    
+    override func awakeFromNib() {
+        
+        newsDescriptionTextView.textContainer.lineFragmentPadding = 0;
+        newsDescriptionTextView.textContainerInset = UIEdgeInsets.zero;
+        
+        newsImageView.layer.cornerRadius = 3.0
+        
+    }
 }
