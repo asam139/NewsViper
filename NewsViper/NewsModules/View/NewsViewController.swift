@@ -8,8 +8,15 @@
 
 import UIKit
 
+
+
 class NewsViewController: UIViewController {
     var presenter: NewsViewToPresenterProtocol?
+    
+    static let cellIdentifier:String = "NewsCell_Identifier"
+    @IBOutlet fileprivate  weak var tableView: UITableView!
+    
+    fileprivate var news: [NewsModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +31,37 @@ class NewsViewController: UIViewController {
     
 }
 
+extension NewsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return news.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: NewsViewController.cellIdentifier, for: indexPath) as! NewsCell
+        
+        let newsModel = news[indexPath.row]
+        cell.newsTitleLabel.text = newsModel.title
+        cell.newsDescriptionTextView.text = newsModel.descriptionText
+        cell.newsDateLabel.text = newsModel.pubDate
+    
+        if let imageString = newsModel.imageURL {
+            let imageURL = URL(string: imageString)
+            let imageData = try? Data(contentsOf: imageURL!)
+            if imageData != nil {
+                cell.newsImageView.image = UIImage(data: imageData!)
+            }
+        }
+        
+            
+        return cell
+    }
+}
+
 extension NewsViewController: NewsPresenterToViewProtocol {
     func showNews(news: [NewsModel]) {
-        for oneNew in news {
-            print(String(describing: oneNew))
-        }
+        self.news = news
+        
+        tableView.reloadData()
     }
     
     func showError() {
@@ -39,4 +72,5 @@ extension NewsViewController: NewsPresenterToViewProtocol {
         self.present(alertController, animated: true, completion: nil)
     }
 }
+
 

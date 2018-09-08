@@ -36,11 +36,11 @@ class NewsModel: CustomStringConvertible {
     }
     
     var description: String {
-        return  "Title: \(String(describing: title))" +
-                "Description: \(String(describing: descriptionText))" +
-                "Link: \(String(describing: link))" +
-                "PubDate: \(String(describing: pubDate))" +
-                "Image: \(String(describing: imageURL))"
+        return  "Title: \(title ?? "No name")" +
+                "Description: \(descriptionText ?? "No description")" +
+                "Link: \(link ?? "No link")" +
+                "PubDate: \(pubDate ?? "No pub date")" +
+                "Image: \(imageURL ?? "No image"))"
     }
     
     
