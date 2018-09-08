@@ -16,7 +16,8 @@ class NewsInteractor: NewsPresenterToInteractorProtocol {
     fileprivate let queue = DispatchQueue(label: "\(Constants.bundleID).\(String(describing: NewsInteractor.self))", qos: .background, attributes: .concurrent)
     
     func fetchNews() {
-        Alamofire.request(Constants.apiURL).responseString(queue: queue) { response in
+        
+        Alamofire.request(Endpoints.News.fetch.url).responseString(queue: queue) { response in
             if response.response?.statusCode == 200 {
                 let xmlString = response.result.value!
                 let xml = SWXMLHash.parse(xmlString)
