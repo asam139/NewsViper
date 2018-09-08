@@ -11,7 +11,7 @@ import UIKit
 
 class NewsListWireframe: NewsListWireframeProtocol {
     static func createNewsListModule() -> UIViewController {
-        let navController = mainstoryboard.instantiateViewController(withIdentifier: "NewsNavigationController")
+        let navController = mainStoryboard.instantiateViewController(withIdentifier: "NewsNavigationController")
         if let view = navController.childViewControllers.first as? NewsListViewController {
             let presenter: NewsListPresenterProtocol & NewsListInteractorOutputProtocol = NewsListPresenter()
             let interactor: NewsListInteractorInputProtocol & NewsListRemoteDataManagerOutputProtocol = NewsListInteractor()
@@ -33,12 +33,16 @@ class NewsListWireframe: NewsListWireframeProtocol {
         return UIViewController()
     }
     
-    static var mainstoryboard: UIStoryboard{
+    static var mainStoryboard: UIStoryboard{
         return UIStoryboard(name:"Main",bundle: Bundle.main)
     }
     
     func presentNewsDetailScreen(from view: NewsListViewProtocol, forNews news: NewsModel) {
+        let newsDetailsViewController = NewsDetailWireframe.createNewsDetailModule(forNews: news)
         
+        if let sourceView = view as? UIViewController {
+            sourceView.navigationController?.pushViewController(newsDetailsViewController, animated: true)
+        }
     }
     
 }

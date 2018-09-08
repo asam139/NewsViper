@@ -94,8 +94,8 @@ extension NewsListViewController: UITableViewDataSource {
 extension NewsListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let newsModel = news[indexPath.row]
-
+        let newsModel = news[indexPath.row]
+        presenter?.showNewsDetail(forNews: newsModel)
     }
     
 }

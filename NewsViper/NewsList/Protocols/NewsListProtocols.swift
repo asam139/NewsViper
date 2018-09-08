@@ -35,7 +35,7 @@ protocol NewsListPresenterProtocol: class {
     
     // View -> Presenter
     func viewDidLoad()
-    func showNewsDetail(forNews new: NewsModel)
+    func showNewsDetail(forNews news: NewsModel)
 }
 
 protocol NewsListInteractorOutputProtocol: class {

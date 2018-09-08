@@ -18,8 +18,8 @@ class NewsListPresenter: NewsListPresenterProtocol {
         interactor?.retrieveNewsList()
     }
     
-    func showNewsDetail(forNews new: NewsModel) {
-        
+    func showNewsDetail(forNews news: NewsModel) {
+        wireFrame?.presentNewsDetailScreen(from: view!, forNews: news)
     }
 }
 
