@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import SWXMLHash
 
 private let KEY_TITLE = "title";
 private let KEY_DESCRIPTION = "description";
 private let KEY_LINK = "link";
 private let KEY_PUB_DATE = "pubDate";
+private let KEY_MEDIA_THUMBNAIL = "media:thumbnail";
 private let KEY_ATT_IMAGE_URL = "url";
 
 class NewsModel: CustomStringConvertible {
@@ -22,12 +24,23 @@ class NewsModel: CustomStringConvertible {
     var imageURL: String?
     
     
+    convenience init(indexer:XMLIndexer) {
+        self.init()
+    
+        title = indexer[KEY_TITLE].element?.text
+        descriptionText = indexer[KEY_DESCRIPTION].element?.text
+        link = indexer[KEY_LINK].element?.text
+        pubDate = indexer[KEY_PUB_DATE].element?.text
+        imageURL = indexer[KEY_MEDIA_THUMBNAIL].element?.attribute(by: KEY_ATT_IMAGE_URL)?.text
+    
+    }
+    
     var description: String {
-        return  "Title: \(title)" +
-                "Description: \(descriptionText)" +
-                "Link: \(link)" +
-                "PubDate: \(pubDate)" +
-                "Image: \(imageURL)"
+        return  "Title: \(String(describing: title))" +
+                "Description: \(String(describing: descriptionText))" +
+                "Link: \(String(describing: link))" +
+                "PubDate: \(String(describing: pubDate))" +
+                "Image: \(String(describing: imageURL))"
     }
     
     

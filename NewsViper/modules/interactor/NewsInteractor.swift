@@ -18,20 +18,14 @@ class NewsInteractor: NewsPresenterToInteractorProtocol {
     
     func fetchNews() {
         Alamofire.request(Constants.apiURL).responseString(queue: queue) { response in
-            if(response.response?.statusCode == 200){
+            if response.response?.statusCode == 200 {
                 let xmlString = response.result.value!
                 let xml = SWXMLHash.parse(xmlString)
                 
                 let items = xml["rss"]["channel"]["item"].all
                 var news: [NewsModel] = []
                 for item in items {
-                    let model = NewsModel()
-                    model.title = item["title"].element?.text
-                    model.descriptionText = item["description"].element?.text
-                    model.link = item["link"].element?.text
-                    model.pubDate = item["pubDate"].element?.text
-                    model.imageURL = item["media:thumbnail"].element?.attribute(by: "url")?.text
-                    
+                    let model = NewsModel(indexer: item)
                     news.append(model)
                 }
     
@@ -43,7 +37,6 @@ class NewsInteractor: NewsPresenterToInteractorProtocol {
                 DispatchQueue.main.async { [weak self] in
                     self?.presenter?.newsFetchedFailed();
                 }
-                
             }
         }
         
