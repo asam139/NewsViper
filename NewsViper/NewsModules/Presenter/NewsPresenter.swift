@@ -24,13 +24,12 @@ extension NewsPresenter: NewsViewToPresenterProtocol {
 
 extension NewsPresenter: NewsInteractorToPresenterProtocol {
     
-    
     func newsFetched(news: [NewsModel]) {
-        
+        view?.showNews(news: news)
     }
     
     func newsFetchedFailed() {
-        
+        view?.showError()
     }
     
 }
