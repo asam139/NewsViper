@@ -35,7 +35,7 @@ protocol NewsListPresenterProtocol: class {
     var news: [NewsModel]? {get set}
     
     // View -> Presenter
-    func viewDidLoad()
+    func viewNeedsUpdated()
     var newsCount: Int {get}
     func newsAt(index: Int) -> NewsModel
     func showNewsDetailAt(index: Int)

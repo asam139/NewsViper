@@ -17,7 +17,7 @@ class NewsListPresenterMock: NewsListPresenterProtocol {
     
     var wasRetrievedNews: Bool = false
     
-    func viewDidLoad() {
+    func viewNeedsUpdated() {
         news = []
         
         interactor?.retrieveNewsList()

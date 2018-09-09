@@ -26,5 +26,5 @@ protocol NewsDetailPresenterProtocol: class {
     var news: NewsModel? { get set }
     
     // View -> presenter
-    func viewDidLoad()
+    func viewNeedsUpdated()
 }

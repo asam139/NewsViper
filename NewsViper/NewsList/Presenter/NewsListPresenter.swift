@@ -15,7 +15,7 @@ class NewsListPresenter: NewsListPresenterProtocol {
     var news: [NewsModel]?
     
     
-    func viewDidLoad() {
+    func viewNeedsUpdated() {
         news = []
         
         view?.showLoading()

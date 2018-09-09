@@ -21,7 +21,7 @@ class NewsDetailViewController: UIViewController, NewsDetailViewProtocol {
         
         webView.navigationDelegate = self
         
-        presenter?.viewDidLoad()
+        presenter?.viewNeedsUpdated()
     }
     
     

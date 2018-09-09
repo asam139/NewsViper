@@ -34,7 +34,7 @@ class NewsListTests: XCTestCase {
         dataRemote.remoteRequestHandler = interactor
         
         // Retrieve news list
-        provider.viewDidLoad()
+        provider.viewNeedsUpdated()
         
         expect(provider.wasRetrievedNews).to(beTrue())
     }

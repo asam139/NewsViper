@@ -13,7 +13,7 @@ class NewsDetailPresenter: NewsDetailPresenterProtocol {
     var wireframe: NewsDetailWireframeProtocol?
     var news: NewsModel?
     
-    func viewDidLoad() {
+    func viewNeedsUpdated() {
         view?.showNewsDetail(forNews: news!)
     }
 

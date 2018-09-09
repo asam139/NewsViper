@@ -22,7 +22,7 @@ class NewsListViewController: UIViewController {
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(search(sender:)))
         
-        presenter?.viewDidLoad()
+        presenter?.viewNeedsUpdated()
     }
     
     override func viewWillAppear(_ animated: Bool) {
