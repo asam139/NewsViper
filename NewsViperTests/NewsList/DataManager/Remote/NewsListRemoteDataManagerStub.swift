@@ -14,21 +14,17 @@ class NewsListRemoteDataManagerStub: NewsListRemoteDataManagerInputProtocol {
     var remoteRequestHandler: NewsListRemoteDataManagerOutputProtocol?
     
     func retrieveNewsList() {
-        
-        let testBundle = Bundle(for: type(of: self))
-        let xmlPath = testBundle.path(forResource: "news", ofType: "xml")
-        let fileURL = URL(fileURLWithPath: xmlPath!)
-        let xmlString = try? String(contentsOf: fileURL, encoding: .utf8)
-        
-        if xmlString != nil {
-            let xml = SWXMLHash.parse(xmlString!)
-            
-            let items = xml["rss"]["channel"]["item"].all
-            let news: [NewsModel] = NewsModel.mapArrayFrom(indexers: items)
-            
-            self.remoteRequestHandler?.onNewsRetrieved(news)
-        } else {
+        guard let url = Bundle.main.url(forResource: "News", withExtension: "xml") else {
             self.remoteRequestHandler?.onError()
+            return
         }
+        
+        let xmlString = try? String(contentsOf: url, encoding: .utf8)
+        let xml = SWXMLHash.parse(xmlString!)
+        
+        let items = xml["rss"]["channel"]["item"].all
+        let news: [NewsModel] = NewsModel.mapArrayFrom(indexers: items)
+        
+        self.remoteRequestHandler?.onNewsRetrieved(news)
     }
 }
