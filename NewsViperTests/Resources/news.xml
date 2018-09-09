@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet title="XSL_formatting" type="text/xsl" href="/shared/bsp/xsl/rss/nolsol.xsl"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/">
+    <channel>
+        <title><![CDATA[BBC News - World]]></title>
+        <description><![CDATA[BBC News - World]]></description>
+        <link>https://www.bbc.co.uk/news/</link>
+        <image>
+            <url>https://news.bbcimg.co.uk/nol/shared/img/bbc_news_120x60.gif</url>
+            <title>BBC News - World</title>
+            <link>https://www.bbc.co.uk/news/</link>
+        </image>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sat, 08 Sep 2018 11:47:02 GMT</lastBuildDate>
+        <copyright><![CDATA[Copyright: (C) British Broadcasting Corporation, see http://news.bbc.co.uk/2/hi/help/rss/4498287.stm for terms and conditions of reuse.]]></copyright>
+        <language><![CDATA[en-gb]]></language>
+        <ttl>15</ttl>
+        <item>
+            <title><![CDATA[Egypt sentences hundreds over 2013 pro-Morsi protests]]></title>
+            <description><![CDATA[Egypt has delivered verdicts for more than 700 people in a mass trial, confirming 75 death sentences.]]></description>
+            <link>https://www.bbc.co.uk/news/world-middle-east-45457935</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-middle-east-45457935</guid>
+            <pubDate>Sat, 08 Sep 2018 11:41:52 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/B896/production/_103345274_mediaitem103344100.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Swedish election: PM says voting for anti-immigration SD is 'dangerous']]></title>
+            <description><![CDATA[It is the final day of an election campaign that has seen a surge in support for far right.]]></description>
+            <link>https://www.bbc.co.uk/news/world-europe-45458012</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-europe-45458012</guid>
+            <pubDate>Sat, 08 Sep 2018 11:06:02 GMT</pubDate>
+            <media:thumbnail width="768" height="432" url="http://c.files.bbci.co.uk/824A/production/_103345333_mediaitem103345332.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Mac Miller: US rapper 'found dead at home' aged 26]]></title>
+            <description><![CDATA[The artist was found dead at his home in California, officials confirm, after an apparent overdose.]]></description>
+            <link>https://www.bbc.co.uk/news/entertainment-arts-45455769</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/entertainment-arts-45455769</guid>
+            <pubDate>Sat, 08 Sep 2018 01:23:56 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/86DC/production/_103342543_macmiller.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[George Papadopoulos: Ex-Trump adviser jailed in Russia inquiry]]></title>
+            <description><![CDATA[Ex-Trump aide George Papadopoulos is jailed for 14 days for lying to the FBI in the Russia inquiry.]]></description>
+            <link>https://www.bbc.co.uk/news/world-us-canada-45455050</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-us-canada-45455050</guid>
+            <pubDate>Sat, 08 Sep 2018 07:44:26 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/EF8C/production/_103342316_hi049122992.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Alibaba's Jack Ma 'to step down and focus on philanthropy']]></title>
+            <description><![CDATA[The Chinese tycoon says he will resign as chairman on Monday to focus on philanthropy in education.]]></description>
+            <link>https://www.bbc.co.uk/news/world-asia-china-45457224</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-asia-china-45457224</guid>
+            <pubDate>Sat, 08 Sep 2018 03:18:38 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/15E7C/production/_103342798_049128094.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Syria war: 'Russian strikes' target Idlib as offensive looms]]></title>
+            <description><![CDATA[The air raids came as Russia's president dismissed Turkey's calls for a ceasefire in northern Syria.]]></description>
+            <link>https://www.bbc.co.uk/news/world-middle-east-45456045</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-middle-east-45456045</guid>
+            <pubDate>Sat, 08 Sep 2018 01:12:24 GMT</pubDate>
+            <media:thumbnail width="1000" height="562" url="http://c.files.bbci.co.uk/9744/production/_103342783_049112821.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Brazil's Jair Bolsonaro 'lost 40% of blood in stabbing']]></title>
+            <description><![CDATA[Presidential front-runner Jair Bolsonaro is unlikely to return to campaigning after being attacked.]]></description>
+            <link>https://www.bbc.co.uk/news/world-latin-america-45451473</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-latin-america-45451473</guid>
+            <pubDate>Fri, 07 Sep 2018 23:30:12 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/877B/production/_103338643_mediaitem103338642.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Texas officer kills man in flat she mistakes for her own]]></title>
+            <description><![CDATA[The off-duty officer in Dallas, Texas who killed a 26-year-old man in a flat is under investigation.]]></description>
+            <link>https://www.bbc.co.uk/news/world-us-canada-45450558</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-us-canada-45450558</guid>
+            <pubDate>Fri, 07 Sep 2018 18:25:56 GMT</pubDate>
+            <media:thumbnail width="549" height="309" url="http://c.files.bbci.co.uk/184A5/production/_103339499_bothamjean.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Paramedic says Nikolai Glushkov believed he was poisoned]]></title>
+            <description><![CDATA[Kremlin critic Nikolai Glushkov told a paramedic in 2013 he thought two Russians had poisoned him.]]></description>
+            <link>https://www.bbc.co.uk/news/uk-45455464</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/uk-45455464</guid>
+            <pubDate>Sat, 08 Sep 2018 04:18:22 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/1745C/production/_103342359_23b80a86-9844-4d24-93b0-9a6efde21af9.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Trump urges inquiry into anonymous New York Times editorial]]></title>
+            <description><![CDATA[He said the attorney general should investigate "because I really believe it's national security".]]></description>
+            <link>https://www.bbc.co.uk/news/world-us-canada-45452960</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-us-canada-45452960</guid>
+            <pubDate>Fri, 07 Sep 2018 19:19:38 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/1844C/production/_103340499_hi049117488.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Obama attacks 'crazy stuff' from Trump White House]]></title>
+            <description><![CDATA[The ex-president warns US democracy is in peril; Mr Trump says he "fell asleep" watching the speech.]]></description>
+            <link>https://www.bbc.co.uk/news/world-us-canada-45452954</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-us-canada-45452954</guid>
+            <pubDate>Fri, 07 Sep 2018 20:15:33 GMT</pubDate>
+            <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/99EC/production/_103340493_hi049117461.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Five things about Brazil's right-wing presidential candidate]]></title>
+            <description><![CDATA[Jair Bolsonaro, the front-runner in Brazil's presidential election, was stabbed at a campaign rally.]]></description>
+            <link>https://www.bbc.co.uk/news/world-latin-america-45458730</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-latin-america-45458730</guid>
+            <pubDate>Sat, 08 Sep 2018 10:05:01 GMT</pubDate>
+            <media:thumbnail width="946" height="532" url="http://c.files.bbci.co.uk/1800/production/_103344160_p06kn8c1.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Plastic pollution: Giant barrier to clean up eastern Pacific]]></title>
+            <description><![CDATA[The ambitious project aims to tackle a collection of waste known as the Great Garbage Patch.]]></description>
+            <link>https://www.bbc.co.uk/news/science-environment-45453282</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/science-environment-45453282</guid>
+            <pubDate>Fri, 07 Sep 2018 17:54:44 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/8785/production/_103339643_p06klhvh.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Cardi B leaves Nicki Minaj scuffle with bump above eye]]></title>
+            <description><![CDATA[The two rappers came to blows at New York Fashion week, after their ongoing feud escalated.]]></description>
+            <link>https://www.bbc.co.uk/news/entertainment-arts-45458751</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/entertainment-arts-45458751</guid>
+            <pubDate>Sat, 08 Sep 2018 09:20:13 GMT</pubDate>
+            <media:thumbnail width="1024" height="575" url="http://c.files.bbci.co.uk/5FE0/production/_103344542_p06kn8lm.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Mac Miller death: 'This is too much']]></title>
+            <description><![CDATA[His friend, rapper Pittsburgh Slim, was among those paying tribute to the musician.]]></description>
+            <link>https://www.bbc.co.uk/news/world-us-canada-45458810</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-us-canada-45458810</guid>
+            <pubDate>Sat, 08 Sep 2018 09:34:41 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/7B38/production/_103344513_p06kn8h2.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Testing out natural aphrodisiacs in Ghana]]></title>
+            <description><![CDATA[Natural aphrodisiacs for sale in Ghana - but what's in them?]]></description>
+            <link>https://www.bbc.co.uk/news/world-africa-45435843</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-africa-45435843</guid>
+            <pubDate>Sat, 08 Sep 2018 08:44:18 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/6238/production/_103344152_p06klmt9.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Libya violence: The human cost of Tripoli unrest]]></title>
+            <description><![CDATA[The impact of recent fighting has had a devastating impact on communities in the Libyan capital.]]></description>
+            <link>https://www.bbc.co.uk/news/world-45455498</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-45455498</guid>
+            <pubDate>Fri, 07 Sep 2018 23:37:41 GMT</pubDate>
+            <media:thumbnail width="1024" height="576" url="http://c.files.bbci.co.uk/4AA0/production/_103340191_p06kmbv5.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[The ways Barack Obama slammed Donald Trump]]></title>
+            <description><![CDATA[Nazis, demagogues and conspiracy theories - three lines of attack by one president against another.]]></description>
+            <link>https://www.bbc.co.uk/news/world-us-canada-45455343</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-us-canada-45455343</guid>
+            <pubDate>Fri, 07 Sep 2018 20:19:36 GMT</pubDate>
+            <media:thumbnail width="1024" height="575" url="http://c.files.bbci.co.uk/16833/production/_103311229_p06km6dh.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Cardi B and Nicki Minaj feud turns physical at New York party]]></title>
+            <description><![CDATA[The famous rap stars scuffled at New York Fashion Week over alleged comments about Cardi B's baby.]]></description>
+            <link>https://www.bbc.co.uk/news/entertainment-arts-45457932</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/entertainment-arts-45457932</guid>
+            <pubDate>Sat, 08 Sep 2018 08:47:41 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/6E54/production/_103344282_nickicardi.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Spain parishioner botches Jesus and Mary statue restoration]]></title>
+            <description><![CDATA[A parishioner at an Asturias chapel paints the robe on a 15th Century statue of Jesus bright green.]]></description>
+            <link>https://www.bbc.co.uk/news/world-europe-45455125</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-europe-45455125</guid>
+            <pubDate>Fri, 07 Sep 2018 19:52:55 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/47EE/production/_103341481_mediaitem103341472.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Tajik mosques repair Lenin statue]]></title>
+            <description><![CDATA[Muslim preachers in Tajikistan have funded repairs to a statue of Lenin.]]></description>
+            <link>https://www.bbc.co.uk/news/blogs-news-from-elsewhere-45446494</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/blogs-news-from-elsewhere-45446494</guid>
+            <pubDate>Fri, 07 Sep 2018 16:41:25 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/141F7/production/_103332428_lenin.png"/>
+        </item>
+        <item>
+            <title><![CDATA[Finnish travellers warned about flawed passports]]></title>
+            <description><![CDATA[Finnish police warn flawed watermarks can cause passport problems.]]></description>
+            <link>https://www.bbc.co.uk/news/blogs-news-from-elsewhere-45446408</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/blogs-news-from-elsewhere-45446408</guid>
+            <pubDate>Fri, 07 Sep 2018 10:16:59 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/9225/production/_103331473_swan.png"/>
+        </item>
+        <item>
+            <title><![CDATA[Buffalo bottoms prove too much for Iranian TV censors]]></title>
+            <description><![CDATA[Writers and directors for Iran's state TV take to the internet to share stories of censorship.]]></description>
+            <link>https://www.bbc.co.uk/news/blogs-news-from-elsewhere-45421865</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/blogs-news-from-elsewhere-45421865</guid>
+            <pubDate>Wed, 05 Sep 2018 12:34:34 GMT</pubDate>
+            <media:thumbnail width="512" height="288" url="http://c.files.bbci.co.uk/792C/production/_103302013_gettyimages-992350052.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[North Korea: Six months' training for 10 minutes on parade]]></title>
+            <description><![CDATA[Dazzling displays of discipline require months of practice and loyalty to the Kim dynasty.]]></description>
+            <link>https://www.bbc.co.uk/news/world-asia-45443189</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-asia-45443189</guid>
+            <pubDate>Fri, 07 Sep 2018 21:27:30 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/8839/production/_103337843_3407cd8f-2b55-4199-b8e1-a2afa9fd8f63.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Could Nasa's James Webb Space Telescope detect alien life?]]></title>
+            <description><![CDATA[It's come close to cancellation several times, but could the successor to the Hubble telescope make the greatest ever discovery?]]></description>
+            <link>https://www.bbc.co.uk/news/science-environment-45400144</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/science-environment-45400144</guid>
+            <pubDate>Fri, 07 Sep 2018 21:42:51 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/B734/production/_94800964_mediaitem94799437.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[The Indian activist jailed for being gay]]></title>
+            <description><![CDATA[Arif Jafar was jailed for 47 days under the colonial-era law that has now been struck down.]]></description>
+            <link>https://www.bbc.co.uk/news/world-asia-india-45444652</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/world-asia-india-45444652</guid>
+            <pubDate>Sat, 08 Sep 2018 00:10:11 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/61A0/production/_103329942_img_8923.jpg"/>
+        </item>
+        <item>
+            <title><![CDATA[Apple v Amazon: Battle of the titans]]></title>
+            <description><![CDATA[Apple and Amazon have seen their market value top $1tn, but will their growth continue to accelerate?]]></description>
+            <link>https://www.bbc.co.uk/news/business-45430686</link>
+            <guid isPermaLink="true">https://www.bbc.co.uk/news/business-45430686</guid>
+            <pubDate>Fri, 07 Sep 2018 20:39:18 GMT</pubDate>
+            <media:thumbnail width="976" height="549" url="http://c.files.bbci.co.uk/4BA3/production/_103336391_fightwithout.jpg"/>
+        </item>
+    </channel>
+</rss>
