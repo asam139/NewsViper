@@ -1,0 +1,8 @@
+<item>
+    <title><![CDATA[Title]]></title>
+    <description><![CDATA[Description]]></description>
+    <link>https://example.com</link>
+    <guid isPermaLink="true">https://example.com</guid>
+    <pubDate>Mon, 01 Jan 2018 00:00:00 GMT</pubDate>
+    <media:thumbnail width="512" height="512" url="https://example.com/example.png"/>
+</item>

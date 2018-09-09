@@ -1,30 +1,38 @@
 PODS:
   - Alamofire (4.7.3)
   - EZLoadingActivity (1.01)
+  - Nimble (7.3.0)
+  - Quick (1.3.1)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
   - SWXMLHash (4.7.1)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.7.3)
-  - EZLoadingActivity
+  - Alamofire (~> 4.7)
+  - EZLoadingActivity (~> 1.0)
+  - Nimble (~> 7.3)
+  - Quick (~> 1.3)
   - SDWebImage (~> 4.0)
-  - SWXMLHash (~> 4.7.1)
+  - SWXMLHash (~> 4.7)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - EZLoadingActivity
+    - Nimble
+    - Quick
     - SDWebImage
     - SWXMLHash
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   EZLoadingActivity: edd7e387e5197b116ce2cccb3fd747ababc2a510
+  Nimble: c8d6a1f463701921c46de965c673e13cafa09196
+  Quick: d17304d58d0d169dd0bd1c6e5c28e3318de32a1a
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SWXMLHash: 661b67bc94a01fe71a6ad4ca690cf2cafa5d1d6f
 
-PODFILE CHECKSUM: 28326e9480a5677b27e480f786afa32e23454800
+PODFILE CHECKSUM: 3e464cb7c6a8fdd494a51d20f423c22841385a25
 
 COCOAPODS: 1.5.3

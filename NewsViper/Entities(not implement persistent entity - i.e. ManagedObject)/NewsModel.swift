@@ -47,7 +47,7 @@ class NewsModel: CustomStringConvertible {
 
 extension NewsModel {
     
-    static func mapIndexerArray(indexers:[XMLIndexer]) -> [NewsModel] {
+    static func mapArrayFrom(indexers: [XMLIndexer]) -> [NewsModel] {
         var news: [NewsModel] = []
         for item in indexers {
             let model = NewsModel(indexer: item)

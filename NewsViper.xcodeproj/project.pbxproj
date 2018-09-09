@@ -29,7 +29,9 @@
 		428611C721444D5F001A6B05 /* NewsDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428611C621444D5F001A6B05 /* NewsDetailProtocols.swift */; };
 		428611C9214450E6001A6B05 /* NewsDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428611C8214450E6001A6B05 /* NewsDetailPresenter.swift */; };
 		428611CF2145408B001A6B05 /* NewsListRemoteDataManagerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428611CE2145408B001A6B05 /* NewsListRemoteDataManagerStub.swift */; };
-		428611D22145461C001A6B05 /* news.xml in Resources */ = {isa = PBXBuildFile; fileRef = 428611D12145461C001A6B05 /* news.xml */; };
+		428611D22145461C001A6B05 /* News.xml in Resources */ = {isa = PBXBuildFile; fileRef = 428611D12145461C001A6B05 /* News.xml */; };
+		428611D421454DA0001A6B05 /* OneNews.xml in Resources */ = {isa = PBXBuildFile; fileRef = 428611D321454DA0001A6B05 /* OneNews.xml */; };
+		428611D921454E00001A6B05 /* NewsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428611D821454E00001A6B05 /* NewsModelTests.swift */; };
 		7C28EBD72116954C95A79D34 /* Pods_NewsViperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7FE0024B328ED2B6D8AEFA8 /* Pods_NewsViperTests.framework */; };
 		B0F2857A4D87715285838A57 /* Pods_NewsViper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3539D8EDF96F6C6D73AAC77E /* Pods_NewsViper.framework */; };
 /* End PBXBuildFile section */
@@ -83,7 +85,9 @@
 		428611C621444D5F001A6B05 /* NewsDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailProtocols.swift; sourceTree = "<group>"; };
 		428611C8214450E6001A6B05 /* NewsDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailPresenter.swift; sourceTree = "<group>"; };
 		428611CE2145408B001A6B05 /* NewsListRemoteDataManagerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListRemoteDataManagerStub.swift; sourceTree = "<group>"; };
-		428611D12145461C001A6B05 /* news.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = news.xml; sourceTree = "<group>"; };
+		428611D12145461C001A6B05 /* News.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = News.xml; sourceTree = "<group>"; };
+		428611D321454DA0001A6B05 /* OneNews.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = OneNews.xml; sourceTree = "<group>"; };
+		428611D821454E00001A6B05 /* NewsModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModelTests.swift; sourceTree = "<group>"; };
 		4CE4DEBEE548DDBF7BE08CC6 /* Pods-NewsViperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsViperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsViperTests/Pods-NewsViperTests.release.xcconfig"; sourceTree = "<group>"; };
 		DA2A23B3E7FC6FD9B7F8E6E2 /* Pods-NewsViper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsViper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsViper/Pods-NewsViper.debug.xcconfig"; sourceTree = "<group>"; };
 		E1F15B0A0C654C3B71122EF3 /* Pods-NewsViperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsViperUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsViperUITests/Pods-NewsViperUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				428611CA21453397001A6B05 /* NewsList */,
+				428611D521454DAF001A6B05 /* EntitiesTests */,
 				423DBE012143BB2900959547 /* NewsViperTests.swift */,
 				428611D0214545A5001A6B05 /* Resources */,
 				423DBE032143BB2900959547 /* Info.plist */,
@@ -342,9 +347,18 @@
 		428611D0214545A5001A6B05 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				428611D12145461C001A6B05 /* news.xml */,
+				428611D321454DA0001A6B05 /* OneNews.xml */,
+				428611D12145461C001A6B05 /* News.xml */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		428611D521454DAF001A6B05 /* EntitiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				428611D821454E00001A6B05 /* NewsModelTests.swift */,
+			);
+			path = EntitiesTests;
 			sourceTree = "<group>";
 		};
 		F27021A5E5235080FE965833 /* Frameworks */ = {
@@ -400,6 +414,7 @@
 				423DBDF92143BB2900959547 /* Sources */,
 				423DBDFA2143BB2900959547 /* Frameworks */,
 				423DBDFB2143BB2900959547 /* Resources */,
+				1BF2162DF97D205A15AC48E3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -419,6 +434,7 @@
 				423DBE042143BB2900959547 /* Sources */,
 				423DBE052143BB2900959547 /* Frameworks */,
 				423DBE062143BB2900959547 /* Resources */,
+				84EBC8E821689BCE4E44AA41 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -488,7 +504,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				428611D22145461C001A6B05 /* news.xml in Resources */,
+				428611D22145461C001A6B05 /* News.xml in Resources */,
+				428611D421454DA0001A6B05 /* OneNews.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +541,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewsViper/Pods-NewsViper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BF2162DF97D205A15AC48E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NewsViperTests/Pods-NewsViperTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewsViperTests/Pods-NewsViperTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4C45A4B7CF8AA548C9CE81AD /* [CP] Check Pods Manifest.lock */ = {
@@ -580,6 +617,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		84EBC8E821689BCE4E44AA41 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NewsViperUITests/Pods-NewsViperUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewsViperUITests/Pods-NewsViperUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -610,6 +667,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				428611CF2145408B001A6B05 /* NewsListRemoteDataManagerStub.swift in Sources */,
+				428611D921454E00001A6B05 /* NewsModelTests.swift in Sources */,
 				423DBE022143BB2900959547 /* NewsViperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -775,6 +833,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DA2A23B3E7FC6FD9B7F8E6E2 /* Pods-NewsViper.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -796,6 +855,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 055A898EE5C533961C85A1E9 /* Pods-NewsViper.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -817,7 +877,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 13270C2EA546E6B49F889450 /* Pods-NewsViperTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U96GUE2A6L;
@@ -839,7 +899,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4CE4DEBEE548DDBF7BE08CC6 /* Pods-NewsViperTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U96GUE2A6L;
@@ -861,7 +921,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E1F15B0A0C654C3B71122EF3 /* Pods-NewsViperUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U96GUE2A6L;
 				INFOPLIST_FILE = NewsViperUITests/Info.plist;
@@ -882,7 +942,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB92C44785E7A895DDC1CB5E /* Pods-NewsViperUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U96GUE2A6L;
 				INFOPLIST_FILE = NewsViperUITests/Info.plist;
