@@ -156,6 +156,7 @@
 		423DBE002143BB2900959547 /* NewsViperTests */ = {
 			isa = PBXGroup;
 			children = (
+				428611CA21453397001A6B05 /* NewsList */,
 				423DBE012143BB2900959547 /* NewsViperTests.swift */,
 				423DBE032143BB2900959547 /* Info.plist */,
 			);
@@ -307,6 +308,13 @@
 				428611C421444D32001A6B05 /* NewsDetailWireframe.swift */,
 			);
 			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		428611CA21453397001A6B05 /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NewsList;
 			sourceTree = "<group>";
 		};
 		F27021A5E5235080FE965833 /* Frameworks */ = {

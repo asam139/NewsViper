@@ -13,7 +13,7 @@ protocol NewsListViewProtocol: class {
     var presenter: NewsListPresenterProtocol? { get set }
     
     // PRESENTER -> VIEW
-    func showNews(_ news: [NewsModel])
+    func refreshNews()
     
     func showError()
     
@@ -32,10 +32,13 @@ protocol NewsListPresenterProtocol: class {
     var view: NewsListViewProtocol? { get set }
     var interactor: NewsListInteractorInputProtocol? { get set }
     var wireFrame: NewsListWireframeProtocol? { get set }
+    var news: [NewsModel]? {get set}
     
     // View -> Presenter
     func viewDidLoad()
-    func showNewsDetail(forNews news: NewsModel)
+    var newsCount: Int {get}
+    func newsAt(index: Int) -> NewsModel
+    func showNewsDetailAt(index: Int)
 }
 
 protocol NewsListInteractorOutputProtocol: class {

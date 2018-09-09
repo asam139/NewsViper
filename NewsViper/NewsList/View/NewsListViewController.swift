@@ -15,7 +15,6 @@ class NewsListViewController: UIViewController {
     static fileprivate let cellIdentifier:String = "NewsListCell_Identifier"
     
     var presenter: NewsListPresenterProtocol?
-    fileprivate var news: [NewsModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,9 +53,7 @@ extension NewsListViewController: NewsListViewProtocol {
         EZLoadingActivity.hide()
     }
     
-    func showNews(_ news: [NewsModel]) {
-        self.news = news
-        
+    func refreshNews() {
         tableView.reloadData()
     }
     
@@ -71,13 +68,13 @@ extension NewsListViewController: NewsListViewProtocol {
 
 extension NewsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return news.count
+        return self.presenter!.newsCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NewsListViewController.cellIdentifier, for: indexPath) as! NewsListCell
         
-        let newsModel = news[indexPath.row]
+        let newsModel = self.presenter!.newsAt(index:indexPath.row)
         cell.newsTitleLabel.text = newsModel.title
         cell.newsDescriptionTextView.text = newsModel.descriptionText
         cell.newsDateLabel.text = newsModel.pubDate
@@ -95,8 +92,7 @@ extension NewsListViewController: UITableViewDataSource {
 extension NewsListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let newsModel = news[indexPath.row]
-        presenter?.showNewsDetail(forNews: newsModel)
+        presenter?.showNewsDetailAt(index: indexPath.row)
     }
     
 }

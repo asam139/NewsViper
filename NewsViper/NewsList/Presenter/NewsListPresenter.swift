@@ -12,21 +12,36 @@ class NewsListPresenter: NewsListPresenterProtocol {
     weak var view: NewsListViewProtocol?
     var interactor: NewsListInteractorInputProtocol?
     var wireFrame: NewsListWireframeProtocol?
+    var news: [NewsModel]?
+    
     
     func viewDidLoad() {
+        news = []
+        
         view?.showLoading()
         interactor?.retrieveNewsList()
     }
     
-    func showNewsDetail(forNews news: NewsModel) {
+    var newsCount: Int {
+        return (news?.count)!
+    }
+    
+    func newsAt(index: Int) -> NewsModel {
+        return news![index]
+    }
+    
+    func showNewsDetailAt(index: Int) {
+        let news = self.news![index]
         wireFrame?.presentNewsDetailScreen(from: view!, forNews: news)
     }
+    
 }
 
 extension NewsListPresenter: NewsListInteractorOutputProtocol {
     func didRetrieveNews(_ news: [NewsModel]) {
+        self.news = news
         view?.hideLoading()
-        view?.showNews(news)
+        view?.refreshNews()
     }
     
     func onError() {
