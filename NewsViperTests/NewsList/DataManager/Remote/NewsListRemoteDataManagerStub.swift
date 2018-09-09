@@ -14,7 +14,8 @@ class NewsListRemoteDataManagerStub: NewsListRemoteDataManagerInputProtocol {
     var remoteRequestHandler: NewsListRemoteDataManagerOutputProtocol?
     
     func retrieveNewsList() {
-        guard let url = Bundle.main.url(forResource: "News", withExtension: "xml") else {
+        let bundle = Bundle(for: type(of: self))
+        guard let url = bundle.url(forResource: "News", withExtension: "xml") else {
             self.remoteRequestHandler?.onError()
             return
         }

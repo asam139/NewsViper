@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Nimble
 @testable import NewsViper
 
 class NewsListTests: XCTestCase {
@@ -14,9 +15,7 @@ class NewsListTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-            
-        let news = NewsListRemoteDataManagerStub()
-        news.retrieveNewsList()
+        
     }
     
     override func tearDown() {
@@ -24,9 +23,20 @@ class NewsListTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testNewsListProvider_retrievingNews() {
+        let provider = NewsListPresenterMock()
+        let interactor: NewsListInteractorInputProtocol & NewsListRemoteDataManagerOutputProtocol = NewsListInteractor()
+        let dataRemote: NewsListRemoteDataManagerInputProtocol = NewsListRemoteDataManagerStub()
+        
+        provider.interactor = interactor
+        interactor.presenter = provider
+        interactor.remoteDatamanager = dataRemote
+        dataRemote.remoteRequestHandler = interactor
+        
+        // Retrieve news list
+        provider.viewDidLoad()
+        
+        expect(provider.wasRetrievedNews).to(beTrue())
     }
     
 
