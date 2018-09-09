@@ -21,7 +21,7 @@ class NewsDetailWireframe: NewsDetailWireframeProtocol {
             presenter.news = news
             presenter.wireframe = wireframe
             
-            return viewController
+            return view
         }
         return UIViewController()
     }

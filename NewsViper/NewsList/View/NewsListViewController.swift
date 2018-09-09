@@ -8,7 +8,7 @@
 
 import UIKit
 import SDWebImage
-
+import EZLoadingActivity
 
 class NewsListViewController: UIViewController {
     @IBOutlet fileprivate  weak var tableView: UITableView!
@@ -47,10 +47,11 @@ class NewsListViewController: UIViewController {
 
 extension NewsListViewController: NewsListViewProtocol {
     func showLoading() {
-        
+        EZLoadingActivity.show("Loading...", disableUI: false)
     }
     
     func hideLoading() {
+        EZLoadingActivity.hide()
     }
     
     func showNews(_ news: [NewsModel]) {
@@ -60,7 +61,7 @@ extension NewsListViewController: NewsListViewProtocol {
     }
     
     func showError() {
-        let alertController = UIAlertController.init(title: "Error", message: "You are not connection to Internet", preferredStyle: .alert)
+        let alertController = UIAlertController.init(title: ":(", message: "You are not connection to Internet", preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "Ok", style: .cancel, handler:nil)
         alertController.addAction(cancelAction)

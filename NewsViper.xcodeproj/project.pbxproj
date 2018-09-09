@@ -269,10 +269,10 @@
 		428611BD21444916001A6B05 /* NewsDetail */ = {
 			isa = PBXGroup;
 			children = (
-				428611C121444948001A6B05 /* Wireframe */,
 				428611C02144493E001A6B05 /* Protocols */,
-				428611BF21444930001A6B05 /* Presenter */,
 				428611BE2144492A001A6B05 /* View */,
+				428611BF21444930001A6B05 /* Presenter */,
+				428611C121444948001A6B05 /* Wireframe */,
 			);
 			path = NewsDetail;
 			sourceTree = "<group>";
@@ -471,12 +471,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NewsViper/Pods-NewsViper-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/EZLoadingActivity/EZLoadingActivity.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZLoadingActivity.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWXMLHash.framework",
 			);

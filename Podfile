@@ -13,6 +13,7 @@ target 'NewsViper' do
   pod 'SWXMLHash', '~> 4.7.1'
   
   pod 'SDWebImage', '~> 4.0'
+  pod 'EZLoadingActivity'
 
   target 'NewsViperTests' do
     inherit! :search_paths
