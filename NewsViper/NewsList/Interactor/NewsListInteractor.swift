@@ -9,8 +9,8 @@
 import Foundation
 
 class NewsListInteractor: NewsListInteractorInputProtocol {
-    var remoteDatamanager: NewsListRemoteDataManagerInputProtocol?
-    var presenter: NewsListInteractorOutputProtocol?
+    weak var remoteDatamanager: NewsListRemoteDataManagerInputProtocol?
+    weak var presenter: NewsListInteractorOutputProtocol?
     
     func retrieveNewsList() {
         
