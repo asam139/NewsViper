@@ -12,11 +12,15 @@ import SWXMLHash
 
 class NewsListRemoteDataManagerStub: NewsListRemoteDataManagerInputProtocol {
     var remoteRequestHandler: NewsListRemoteDataManagerOutputProtocol?
+    var simulateError: Bool = false
     
     func retrieveNewsList() {
-        let bundle = Bundle(for: type(of: self))
-        guard let url = bundle.url(forResource: "News", withExtension: "xml") else {
+        if (simulateError) {
             self.remoteRequestHandler?.onError()
+        }
+        
+        let bundle = Bundle(for: type(of: self))
+        guard let url = bundle.url(forResource: "News", withExtension: "xml")  else {
             return
         }
         

@@ -11,10 +11,19 @@ import Nimble
 @testable import NewsViper
 
 class NewsListTests: XCTestCase {
+    var presenter:NewsListPresenterMock!
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        presenter = NewsListPresenterMock()
+        let interactor: NewsListInteractorInputProtocol & NewsListRemoteDataManagerOutputProtocol = NewsListInteractor()
+        let dataRemote: NewsListRemoteDataManagerInputProtocol = NewsListRemoteDataManagerStub()
+        
+        presenter.interactor = interactor
+        interactor.presenter = presenter
+        interactor.remoteDatamanager = dataRemote
+        dataRemote.remoteRequestHandler = interactor
         
     }
     
@@ -24,19 +33,27 @@ class NewsListTests: XCTestCase {
     }
     
     func testNewsListProvider_retrievingNews() {
-        let provider = NewsListPresenterMock()
-        let interactor: NewsListInteractorInputProtocol & NewsListRemoteDataManagerOutputProtocol = NewsListInteractor()
-        let dataRemote: NewsListRemoteDataManagerInputProtocol = NewsListRemoteDataManagerStub()
+        // Retrieve news list to update view
+        presenter.viewNeedsUpdated()
         
-        provider.interactor = interactor
-        interactor.presenter = provider
-        interactor.remoteDatamanager = dataRemote
-        dataRemote.remoteRequestHandler = interactor
+        expect(self.presenter.wasRetrievedNews).to(beTrue())
+    }
+    
+    func testNewsListProvider_countingNews() {
+        // Retrieve news list to update view
+        presenter.viewNeedsUpdated()
         
-        // Retrieve news list
-        provider.viewNeedsUpdated()
+        expect(self.presenter.newsCount).to(equal(27))
+    }
+    
+    func testNewsListProvider_errorRetrievingNews() {
+        // Retrieve news list to update view
+        let remoteDataManager = presenter.interactor?.remoteDatamanager as! NewsListRemoteDataManagerStub
+        remoteDataManager.simulateError = true
         
-        expect(provider.wasRetrievedNews).to(beTrue())
+        presenter.viewNeedsUpdated()
+        
+        expect(self.presenter.wasGettingError).to(beTrue())
     }
     
 

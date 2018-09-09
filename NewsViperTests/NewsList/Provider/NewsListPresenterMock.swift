@@ -15,6 +15,7 @@ class NewsListPresenterMock: NewsListPresenterProtocol {
     var wireFrame: NewsListWireframeProtocol?
     var news: [NewsModel]?
     
+    var wasGettingError: Bool = false
     var wasRetrievedNews: Bool = false
     
     func viewNeedsUpdated() {
@@ -24,18 +25,11 @@ class NewsListPresenterMock: NewsListPresenterProtocol {
     }
     
     var newsCount: Int {
-        return 1
+        return news!.count
     }
     
     func newsAt(index: Int) -> NewsModel {
-        let newsModel = NewsModel()
-        newsModel.title = "Title"
-        newsModel.descriptionText = "Description"
-        newsModel.link = "https://example.com"
-        newsModel.pubDate = "Mon, 01 Jan 2018 00:00:00 GMT"
-        newsModel.imageURL = "https://example.com/example.png"
-        
-        return newsModel
+        return news![index]
     }
     
     func showNewsDetailAt(index: Int) {
@@ -50,6 +44,6 @@ extension NewsListPresenterMock: NewsListInteractorOutputProtocol {
     }
     
     func onError() {
-
+        wasGettingError = true
     }
 }
