@@ -23,12 +23,8 @@ class NewsListRemoteDataManager: NewsListRemoteDataManagerInputProtocol {
                 let xml = SWXMLHash.parse(xmlString)
                 
                 let items = xml["rss"]["channel"]["item"].all
-                var news: [NewsModel] = []
-                for item in items {
-                    let model = NewsModel(indexer: item)
-                    news.append(model)
-                }
-                
+                let news: [NewsModel] = NewsModel.mapIndexerArray(indexers: items)
+
                 DispatchQueue.main.async { [weak self] in
                     self?.remoteRequestHandler?.onNewsRetrieved(news)
                 }

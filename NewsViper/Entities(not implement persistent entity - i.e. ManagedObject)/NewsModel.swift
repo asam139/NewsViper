@@ -42,19 +42,19 @@ class NewsModel: CustomStringConvertible {
                 "PubDate: \(pubDate ?? "No pub date")" +
                 "Image: \(imageURL ?? "No image"))"
     }
-    
-    
 }
 
 
-
-/*
- <item>
- <title><![CDATA[George Papadopoulos: Ex-Trump adviser jailed in Russia inquiry]]></title>
- <description><![CDATA[Ex-Trump aide George Papadopoulos is jailed for 14 days for lying to the FBI in the Russia inquiry.]]></description>
- <link>https://www.bbc.co.uk/news/world-us-canada-45455050</link>
- <guid isPermaLink="true">https://www.bbc.co.uk/news/world-us-canada-45455050</guid>
- <pubDate>Sat, 08 Sep 2018 06:02:44 GMT</pubDate>
- <media:thumbnail width="2048" height="1152" url="http://c.files.bbci.co.uk/EF8C/production/_103342316_hi049122992.jpg"/>
- </item>
- */
+extension NewsModel {
+    
+    static func mapIndexerArray(indexers:[XMLIndexer]) -> [NewsModel] {
+        var news: [NewsModel] = []
+        for item in indexers {
+            let model = NewsModel(indexer: item)
+            news.append(model)
+        }
+        
+        return news
+    }
+    
+}
