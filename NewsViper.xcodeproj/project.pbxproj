@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E8AE66408BB7077C0D990CD /* Pods_NewsViperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37F1FFABDF3D23E99D071112 /* Pods_NewsViperUITests.framework */; };
 		423DBDED2143BB2700959547 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423DBDEC2143BB2700959547 /* AppDelegate.swift */; };
 		423DBDEF2143BB2700959547 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423DBDEE2143BB2700959547 /* NewsListViewController.swift */; };
 		423DBDF22143BB2700959547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423DBDF02143BB2700959547 /* Main.storyboard */; };
@@ -36,6 +35,7 @@
 		428611D921454E00001A6B05 /* NewsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428611D821454E00001A6B05 /* NewsModelTests.swift */; };
 		7C28EBD72116954C95A79D34 /* Pods_NewsViperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7FE0024B328ED2B6D8AEFA8 /* Pods_NewsViperTests.framework */; };
 		B0F2857A4D87715285838A57 /* Pods_NewsViper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3539D8EDF96F6C6D73AAC77E /* Pods_NewsViper.framework */; };
+		D518BD49E14CF63AF3D50604 /* libPods-NewsViperUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A0A121D2E6FD4DB752F98B /* libPods-NewsViperUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,6 @@
 		055A898EE5C533961C85A1E9 /* Pods-NewsViper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsViper.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsViper/Pods-NewsViper.release.xcconfig"; sourceTree = "<group>"; };
 		13270C2EA546E6B49F889450 /* Pods-NewsViperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsViperTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsViperTests/Pods-NewsViperTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3539D8EDF96F6C6D73AAC77E /* Pods_NewsViper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsViper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		37F1FFABDF3D23E99D071112 /* Pods_NewsViperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsViperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		423DBDE92143BB2700959547 /* NewsViper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsViper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		423DBDEC2143BB2700959547 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		423DBDEE2143BB2700959547 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		4CE4DEBEE548DDBF7BE08CC6 /* Pods-NewsViperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsViperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsViperTests/Pods-NewsViperTests.release.xcconfig"; sourceTree = "<group>"; };
 		DA2A23B3E7FC6FD9B7F8E6E2 /* Pods-NewsViper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsViper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsViper/Pods-NewsViper.debug.xcconfig"; sourceTree = "<group>"; };
 		E1F15B0A0C654C3B71122EF3 /* Pods-NewsViperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsViperUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewsViperUITests/Pods-NewsViperUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E7A0A121D2E6FD4DB752F98B /* libPods-NewsViperUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NewsViperUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB92C44785E7A895DDC1CB5E /* Pods-NewsViperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsViperUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewsViperUITests/Pods-NewsViperUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F7FE0024B328ED2B6D8AEFA8 /* Pods_NewsViperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsViperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E8AE66408BB7077C0D990CD /* Pods_NewsViperUITests.framework in Frameworks */,
+				D518BD49E14CF63AF3D50604 /* libPods-NewsViperUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +388,7 @@
 			children = (
 				3539D8EDF96F6C6D73AAC77E /* Pods_NewsViper.framework */,
 				F7FE0024B328ED2B6D8AEFA8 /* Pods_NewsViperTests.framework */,
-				37F1FFABDF3D23E99D071112 /* Pods_NewsViperUITests.framework */,
+				E7A0A121D2E6FD4DB752F98B /* libPods-NewsViperUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -456,7 +456,6 @@
 				423DBE042143BB2900959547 /* Sources */,
 				423DBE052143BB2900959547 /* Frameworks */,
 				423DBE062143BB2900959547 /* Resources */,
-				C4C0F3615665EEEB1392201E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -572,8 +571,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-NewsViperTests/Pods-NewsViperTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble-framework/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick-framework/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -637,26 +636,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C4C0F3615665EEEB1392201E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-NewsViperUITests/Pods-NewsViperUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NewsViperUITests/Pods-NewsViperUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

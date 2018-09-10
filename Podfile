@@ -28,10 +28,12 @@ target 'NewsViper' do
         testing_pods
     end
 
-    target 'NewsViperUITests' do
-        inherit! :search_paths
-        # Pods for testing
-        testing_pods
-    end
 
+
+end
+
+target 'NewsViperUITests' do
+   
+    # Pods for testing
+    testing_pods
 end

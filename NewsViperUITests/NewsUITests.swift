@@ -28,6 +28,8 @@ class NewsUITests: XCTestCase, NewsList {
     func testNewsListView_hasNews() {
         givenAppIsLaunched()
         thenIShouldSeeNews()
+        
+        
     }
     
     func testNewsListView_shouldSeeNewsDetailsOnceEntered() {
