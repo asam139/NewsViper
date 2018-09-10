@@ -12,8 +12,7 @@ import Nimble
 
 protocol NewsList {
     func testNewsListView_hasNews()
-    func testNewsListView_shouldSeeNewsDetailsOnceEntered()
-    
+    func testNewsListView_shouldSeeNewsDetails()
 }
 
 extension NewsList {

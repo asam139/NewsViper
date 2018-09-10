@@ -12,12 +12,8 @@ class NewsUITests: XCTestCase, NewsList {
         
     override func setUp() {
         super.setUp()
-
-        continueAfterFailure = false
         
         XCUIApplication().launch()
-
-        
     }
     
     override func tearDown() {
@@ -28,11 +24,9 @@ class NewsUITests: XCTestCase, NewsList {
     func testNewsListView_hasNews() {
         givenAppIsLaunched()
         thenIShouldSeeNews()
-        
-        
     }
     
-    func testNewsListView_shouldSeeNewsDetailsOnceEntered() {
+    func testNewsListView_shouldSeeNewsDetails() {
         givenAppIsLaunched()
         whenITapNews()
         thenIShouldSeeNewsDetails()
