@@ -8,6 +8,7 @@
 
 import Foundation
 import XCTest
+import Nimble
 
 protocol NewsList {
     func testNewsListView_hasNews()
@@ -17,17 +18,35 @@ protocol NewsList {
 
 extension NewsList {
     func givenAppIsLaunched() {
-        XCUIApplication().launch()
+        let app = XCUIApplication()
+        app.launch()
     }
+    
     func thenIShouldSeeNews() {
-        XCTAssertTrue(XCUIApplication().buttons["Greet"].exists)
+        let app = XCUIApplication()
+        
+        // Get first cell
+        let firstCell = app.tables.firstMatch.cells.firstMatch
+   
+        // News should be visible
+        expect(firstCell.exists).to(beTrue())
     }
     
     func whenITapNews() {
+        let app = XCUIApplication()
         
+        // Tap news
+        let firstCell = app.tables.firstMatch.cells.firstMatch
+        if firstCell.exists {
+            firstCell.tap()
+        }
     }
     
     func thenIShouldSeeNewsDetails() {
+        let app = XCUIApplication()
+        let webView = app.webViews.firstMatch
         
+        // Webview should be visible
+        expect(webView.exists).to(beTrue())
     }
 }
