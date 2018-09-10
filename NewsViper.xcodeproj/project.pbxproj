@@ -21,7 +21,6 @@
 		423DBE3A21440BF900959547 /* NewsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423DBE3921440BF900959547 /* NewsListCell.swift */; };
 		42598DAC2145818A00224653 /* NewsListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42598DAB2145818A00224653 /* NewsListTests.swift */; };
 		42598DAF2145839400224653 /* NewsListPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42598DAE2145839400224653 /* NewsListPresenterMock.swift */; };
-		42598DB42145B3BF00224653 /* NewsList+Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42598DB32145B3BF00224653 /* NewsList+Protocol.swift */; };
 		428611B4214439F2001A6B05 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428611B3214439F2001A6B05 /* Endpoint.swift */; };
 		428611B721443D90001A6B05 /* NewsListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428611B621443D90001A6B05 /* NewsListProtocols.swift */; };
 		428611BB2144456A001A6B05 /* NewsListRemoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428611BA2144456A001A6B05 /* NewsListRemoteDataManager.swift */; };
@@ -79,7 +78,6 @@
 		423DBE3921440BF900959547 /* NewsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListCell.swift; sourceTree = "<group>"; };
 		42598DAB2145818A00224653 /* NewsListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTests.swift; sourceTree = "<group>"; };
 		42598DAE2145839400224653 /* NewsListPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListPresenterMock.swift; sourceTree = "<group>"; };
-		42598DB32145B3BF00224653 /* NewsList+Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsList+Protocol.swift"; sourceTree = "<group>"; };
 		428611B3214439F2001A6B05 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		428611B621443D90001A6B05 /* NewsListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListProtocols.swift; sourceTree = "<group>"; };
 		428611BA2144456A001A6B05 /* NewsListRemoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListRemoteDataManager.swift; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 		423DBE0B2143BB2900959547 /* NewsViperUITests */ = {
 			isa = PBXGroup;
 			children = (
-				42598DB32145B3BF00224653 /* NewsList+Protocol.swift */,
 				423DBE0C2143BB2900959547 /* NewsUITests.swift */,
 				423DBE0E2143BB2900959547 /* Info.plist */,
 			);
@@ -678,7 +675,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42598DB42145B3BF00224653 /* NewsList+Protocol.swift in Sources */,
 				423DBE0D2143BB2900959547 /* NewsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
