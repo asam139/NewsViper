@@ -13,6 +13,7 @@ import Nimble
 extension NewsList {
     func givenAppIsLaunched() {
         let app = XCUIApplication()
+        app.launchEnvironment[EnvironmentKeys.TestModeKey] = "1"
         app.launch()
     }
     

@@ -15,16 +15,21 @@ class NewsListWireframe: NewsListWireframeProtocol {
         if let view = navController.childViewControllers.first as? NewsListViewController {
             let presenter: NewsListPresenterProtocol & NewsListInteractorOutputProtocol = NewsListPresenter()
             let interactor: NewsListInteractorInputProtocol & NewsListRemoteDataManagerOutputProtocol = NewsListInteractor()
-            //let localDataManager: NewsListLocalDataManagerInputProtocol = NewsListLocalDataManager()
-            let remoteDataManager: NewsListRemoteDataManagerInputProtocol = NewsListRemoteDataManager()
             let wireFrame: NewsListWireframeProtocol = NewsListWireframe()
+            
+            // Stub for Test Mode
+            let remoteDataManager: NewsListRemoteDataManagerInputProtocol!
+            if ProcessInfo().environment[EnvironmentKeys.TestModeKey] != nil {
+                remoteDataManager = NewsListRemoteDataManagerStub()
+            } else {
+                remoteDataManager = NewsListRemoteDataManager()
+            }
             
             view.presenter = presenter
             presenter.view = view
             presenter.wireFrame = wireFrame
             presenter.interactor = interactor
             interactor.presenter = presenter
-            //interactor.localDatamanager = localDataManager
             interactor.remoteDatamanager = remoteDataManager
             remoteDataManager.remoteRequestHandler = interactor
             

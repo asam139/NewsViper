@@ -8,7 +8,6 @@
 
 import Foundation
 import SWXMLHash
-@testable import NewsViper
 
 class NewsListRemoteDataManagerStub: NewsListRemoteDataManagerInputProtocol {
     var remoteRequestHandler: NewsListRemoteDataManagerOutputProtocol?
