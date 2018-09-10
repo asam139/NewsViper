@@ -1,19 +1,14 @@
 //
-//  NewsList+Protocol.swift
+//  NewsList+Extension.swift
 //  NewsViperUITests
 //
-//  Created by Saul Moreno Abril on 09/09/2018.
+//  Created by Saul Moreno Abril on 10/09/2018.
 //  Copyright © 2018 Saul Moreno Abril. All rights reserved.
 //
 
 import Foundation
 import XCTest
 import Nimble
-
-protocol NewsList {
-    func testNewsListView_hasNews()
-    func testNewsListView_shouldSeeNewsDetails()
-}
 
 extension NewsList {
     func givenAppIsLaunched() {
@@ -26,7 +21,7 @@ extension NewsList {
         
         // Get first cell
         let firstCell = app.tables.firstMatch.cells.firstMatch
-   
+        
         // News should be visible
         expect(firstCell.exists).to(beTrue())
     }

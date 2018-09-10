@@ -13,7 +13,8 @@ class NewsUITests: XCTestCase, NewsList {
     override func setUp() {
         super.setUp()
         
-        XCUIApplication().launch()
+        let app = XCUIApplication()
+        app.launch()
     }
     
     override func tearDown() {
