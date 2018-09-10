@@ -22,12 +22,10 @@ class NewsUITests: XCTestCase, NewsList {
     }
     
     func testNewsListView_hasNews() {
-        
         thenIShouldSeeNews()
     }
     
     func testNewsListView_shouldSeeNewsDetails() {
-        givenAppIsLaunched()
         whenITapNews()
         thenIShouldSeeNewsDetails()
     }
