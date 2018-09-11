@@ -18,11 +18,11 @@ class NewsListCell: UITableViewCell {
     
     
     override func awakeFromNib() {
+        super.awakeFromNib()
         
         newsDescriptionTextView.textContainer.lineFragmentPadding = 0;
         newsDescriptionTextView.textContainerInset = UIEdgeInsets.zero;
         
         newsImageView.layer.cornerRadius = 3.0
-        
     }
 }

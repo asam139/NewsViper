@@ -67,7 +67,6 @@ extension NewsListViewController: NewsListViewProtocol {
     
     func showError() {
         let alertController = UIAlertController.init(title: ":(", message: "You are not connection to Internet", preferredStyle: .alert)
-        
         let cancelAction = UIAlertAction(title: "Ok", style: .cancel, handler:nil)
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true, completion: nil)
