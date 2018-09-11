@@ -25,13 +25,13 @@ enum Endpoints {
         
         public var path: String {
             switch self {
-            case .fetch: return "/news/world/rss.xml"
+                case .fetch: return "/news/world/rss.xml"
             }
         }
         
         public var url: String {
             switch self {
-            case .fetch: return "\(API.baseUrl)\(path)"
+                case .fetch: return "\(API.baseUrl)\(path)"
             }
         }
     }

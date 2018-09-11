@@ -14,7 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Custom navigation bar Appearance
+        let navBarAppearance = UINavigationBar.appearance()
+        navBarAppearance.tintColor = .black
+        navBarAppearance.barTintColor = .newsYellow
+        navBarAppearance.titleTextAttributes = [.backgroundColor: UIColor.white]
+        
+        // Init module
         let newsList = NewsListWireframe.createNewsListModule()
         
         window = UIWindow(frame: UIScreen.main.bounds)

@@ -37,7 +37,7 @@
                                 </variation>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="1" green="0.84313725490196079" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HuQ-8Z-C24" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="BmV-x5-YPT"/>
                             <constraint firstItem="FRw-hF-Y4H" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kZN-er-Hcj"/>
