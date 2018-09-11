@@ -9,6 +9,12 @@
 import Foundation
 import SWXMLHash
 
+// Comment because warning appears
+// This class is shared with main target
+// because the class is used as RemoteDataManager stub
+// when ui test are launched over main target
+//@testable import NewsViper
+
 class NewsListRemoteDataManagerStub: NewsListRemoteDataManagerInputProtocol {
     var remoteRequestHandler: NewsListRemoteDataManagerOutputProtocol?
     var simulateError: Bool = false
