@@ -18,7 +18,15 @@ class NewsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.title = "BBC News"
+        
+        let newsImage = UIImage(named: "news")
+        let newsImageView = UIImageView(image: newsImage)
+        newsImageView.widthAnchor.constraint(equalToConstant: 32).isActive = true
+        newsImageView.heightAnchor.constraint(equalToConstant: 32).isActive = true
+        newsImageView.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = newsImageView
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(search(sender:)))
         
