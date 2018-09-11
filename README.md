@@ -1,6 +1,6 @@
 # News Viper
 
-This repository contains a sample app that implements VIPER architecture with tests implementation.
+This repository contains a sample app that implements VIPER architecture with tests.
 App shows news using public [BCC API](http://feeds.bbci.co.uk/news/world/rss.xml)
 
 The app use these libraries and frameworks:
